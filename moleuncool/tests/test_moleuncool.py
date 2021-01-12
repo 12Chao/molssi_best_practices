@@ -53,4 +53,13 @@ def test_build_bond_list_failure(methane_molecule):
     with pytest.raises(ValueError):
         bonds = moleuncool.build_bond_list(coordinates, min_bond=-1)
 
+def test_calculate_angle():
 
+    r1 =  np.array([0, 0, 1])
+    r2 =  np.array([0, 0, 0])
+    r3 =  np.array([1, 0, 0])
+    
+    expected_value = 90
+    calculated_value = moleuncool.calculate_angle(r1, r2, r3, degrees=True)
+
+    assert expected_value == calculated_value
