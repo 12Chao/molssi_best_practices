@@ -4,6 +4,9 @@ A python package for analyzing and visualizing molecular files. For OLSSI Worksh
 
 Handles the primary functions
 """
+import os
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def canvas(with_attribution=True):
